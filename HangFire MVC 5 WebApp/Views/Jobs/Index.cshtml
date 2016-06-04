@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Jobs";
+}
+
+<h2>Jobs</h2>
+
+<div>
+    <h4>List of Available Jobs</h4>
+    
+    <table class="table table-condensed table-hover">
+        <tr>
+            <td>Enqueue Job : <br />
+                These jobs are being executed only once and almost immediately after they fired.
+            </td>
+            <td>@Html.ActionLink("Add Enqueue Job", "AddEnqueue") </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Delayed/Scheduled Job : <br />
+                Delayed jobs are being executed only once too, but not immediately – only after the specified time interval.</td>
+            <td>@Html.ActionLink("Add Delayed Job", "AddDelayed") </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Recurring Job : <br />
+                Recurring jobs fired many times on the specified CRON schedule.</td>
+            <td>@Html.ActionLink("Add Recurring Job", "AddRecurring") </td>
+            <td>@Html.ActionLink("Remove Recurring Job", "RemoveRecurring") </td>
+        </tr>
+    </table>
+
+
+</div>
